@@ -779,6 +779,12 @@
     [self refreshButtonsState];
 }
 
+- (void)setShowLoadingBar:(BOOL)showLoadingBar
+{
+    _showLoadingBar = showLoadingBar;
+    self.progressView.hidden = !showLoadingBar;
+}
+
 #pragma mark -
 #pragma mark WebView Delegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
